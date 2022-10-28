@@ -1,10 +1,10 @@
 #define IN_LM35 A0
-#define OUT_LED_R 9
+#define OUT_LED_R 11
 #define OUT_LED_G 10
-#define OUT_LED_B 11
-#define THRESHOLD_A 20
-#define THRESHOLD_B 23
-#define THRESHOLD_C 26
+#define OUT_LED_B 9
+#define THRESHOLD_A 25
+#define THRESHOLD_B 27
+#define THRESHOLD_C 30
 
 void setup() {
   // put your setup code here, to run once:
@@ -32,13 +32,13 @@ void loop() {
   // Log
   Serial.println(temp);
 
-  if (temp > THRESHOLD_C) {
+  if (temp >= THRESHOLD_C) {
     led_R = 255;
   }
-  else if (temp > THRESHOLD_B) {
+  else if (temp >= THRESHOLD_B) {
     led_G = 255;
   }
-  else if (temp > THRESHOLD_C) {
+  else if (temp >= THRESHOLD_A) {
     led_B = 255;
   }
   
