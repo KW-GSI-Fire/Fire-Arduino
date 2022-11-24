@@ -44,6 +44,7 @@ void loop() {
   // Set Box Value
   if (raw_potentiometer >= THRESHOLD_POTEN) {
     box_opened = true;
+    led = 255;
   }
   
   // Output - Write Values to LED
